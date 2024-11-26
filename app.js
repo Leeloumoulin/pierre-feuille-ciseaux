@@ -67,15 +67,12 @@ function afficheLeGagnant(gag){
 }
 
 
-function jouer(){
-    // Role : lancer le scénario de jeu
-    // parametres : aucun
-    // retour : aucun
-    choixJoueur = JoueurJoue()
-    nombreOrdi = OrdiJoue()
-    associer()
-    let gagnant = compare()
-    afficheLeGagnant(gagnant)
+function jouer(choix) {
+    choixJoueur = choix; 
+    nombreOrdi = OrdiJoue(); 
+    associer(); 
+    let gagnant = compare(); 
+    afficheLeGagnant(gagnant); 
 }
 
 
