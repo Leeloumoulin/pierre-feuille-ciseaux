@@ -1,5 +1,8 @@
 // varialbes globales : 
 let choixJoueur, choixOrdi, nombreOrdi
+let pierre = document.querySelector("pierre")
+let feuille =document.querySelector("feuille")
+let ciseau =document.querySelector("ciseau")
 // le joueur choisi entre pierre feuille et ciseau : 
 function JoueurJoue() {
     // Role : permet au joueur de saisir son choix
@@ -60,9 +63,9 @@ function afficheLeGagnant(gag){
     // parametre : le gagnant 
     // retour: aucun
     if(gag == "égalité"){
-        document.getElementById("resul").innerHTML = `choix du joueur : ${choixJoueur} \n choix de l'ordi :${choixOrdi} \n Egalité !`
+        document.getElementById("resul").innerHTML = `<p>choix du joueur : ${choixJoueur} <br> choix de l'ordi :${choixOrdi} <br> Egalité ! </p>`
     }else{
-        document.getElementById("resul").innerHTML = `choix du joueur : ${choixJoueur} \n choix de l'ordi :${choixOrdi}\n\n ${gag} gagne`
+        document.getElementById("resul").innerHTML = `<p>choix du joueur : ${choixJoueur} <br> choix de l'ordi :${choixOrdi}<br> ${gag} gagne</p>`
     } 
 }
 
@@ -73,7 +76,7 @@ function jouer(choix) {
     associer(); 
     let gagnant = compare(); 
     afficheLeGagnant(gagnant); 
+    
 }
-
 
 
